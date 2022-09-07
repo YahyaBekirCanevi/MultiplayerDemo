@@ -1,2 +1,2 @@
 # MultiplayerDemo
-A unity Multiplayer game wşth Fishnet
+A unity Multiplayer game demo with Fishnet
