@@ -8,10 +8,11 @@ public class GameManagementController : MonoBehaviour
     public GameObject menu;
     public bool isMenuOpen = true;
     public Color selectedColor;
-
+    public Slider playerHealthSlider;
     private void Start()
     {
         Instance = this;
+        ToggleMenu(true);
     }
     private void Update()
     {

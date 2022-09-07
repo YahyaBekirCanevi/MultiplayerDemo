@@ -9,13 +9,9 @@ public class PlayerColorNetwork : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (base.IsOwner)
+        if (!base.IsOwner)
         {
-
-        }
-        else
-        {
-            gameObject.GetComponent<PlayerColorNetwork>().enabled = false;
+            GetComponent<PlayerColorNetwork>().enabled = false;
         }
     }
 
@@ -35,9 +31,10 @@ public class PlayerColorNetwork : NetworkBehaviour
     {
         ChangeColor(player, color);
     }
+
     [ObserversRpc]
     public void ChangeColor(GameObject player, Color color)
     {
-        transform.GetComponentInChildren<MeshRenderer>().materials[0].color = color;
+        player.GetComponentInChildren<MeshRenderer>().materials[0].color = color;
     }
 }
