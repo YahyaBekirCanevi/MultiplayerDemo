@@ -16,14 +16,15 @@ namespace FishNet.Managing.Server
         /// Returns true if only one server is started.
         /// </summary>
         /// <returns></returns>
-        internal bool OneServerStarted()
+        /* internal */
+        public bool OneServerStarted()
         {
             int startedCount = 0;
             TransportManager tm = NetworkManager.TransportManager;
             //If using multipass check all transports.
             if (tm.Transport is Multipass mp)
             {
-                
+
                 foreach (Transport t in mp.Transports)
                 {
                     //Another transport is started, no need to load start scenes again.
