@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4887224163717233138}
   - component: {fileID: 4887224163717233139}
   - component: {fileID: 1157839109636421093}
+  - component: {fileID: -3477438663841705653}
   m_Layer: 0
   m_Name: Watemelon
   m_TagString: Untagged
@@ -30,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,6 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -108,13 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: -1
-  _scenePathHash: 584410112
-  <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 15686357566122665199
-  _sceneNetworkObjects:
-  - {fileID: 1157839109636421093}
   <IsNested>k__BackingField: 0
   <ComponentIndex>k__BackingField: 0
   _networkBehaviours: []
@@ -123,3 +119,24 @@ MonoBehaviour:
   _isNetworked: 1
   _isGlobal: 0
   _disableOnDespawn: 0
+  NetworkObserver: {fileID: 0}
+  <PrefabId>k__BackingField: 5
+  _scenePathHash: 584410112
+  <SceneId>k__BackingField: 0
+  <AssetPathHash>k__BackingField: 15686357566122665199
+  _sceneNetworkObjects:
+  - {fileID: 1157839109636421093}
+--- !u!114 &-3477438663841705653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4887224163717233140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65242d2bc16dc034a90b2333d47a6c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObjectController: {fileID: 0}
+  damageDealerObject: {fileID: 11400000, guid: 9e2d1420ef6a44446b4b14054dff3c4a, type: 2}
