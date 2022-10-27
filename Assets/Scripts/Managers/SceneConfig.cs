@@ -21,8 +21,8 @@ public class SceneConfig : MonoBehaviour
         if (gameScene != null) gameSceneName = gameScene.name;
     }
 #endif
-    public string mainSceneName;
-    public string gameSceneName;
+    [HideInInspector] public string mainSceneName;
+    [HideInInspector] public string gameSceneName;
     private LocalConnectionState _clientState = LocalConnectionState.Stopped;
     private LocalConnectionState _serverState = LocalConnectionState.Stopped;
     private NetworkManager _networkManager;

@@ -93,12 +93,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8903720284741891810}
-  - component: {fileID: 2589047727254941555}
   - component: {fileID: 1257412758618633604}
-  - component: {fileID: 4475127842887994953}
+  - component: {fileID: 2589047727254941555}
   - component: {fileID: 3542588822992052946}
   - component: {fileID: 2471545568803335098}
-  - component: {fileID: 2843351387878857574}
   - component: {fileID: 2531821649487806876}
   - component: {fileID: -1330333429878458624}
   m_Layer: 0
@@ -125,6 +123,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &1257412758618633604
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856011935944741794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2589047727254941555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,47 +163,6 @@ MonoBehaviour:
   meshes:
   - {fileID: 3239797569892591866}
   - {fileID: 1191978590926253574}
---- !u!143 &1257412758618633604
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856011935944741794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4475127842887994953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856011935944741794}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf79f990cb06054b9ad2491bdd02407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 1
-  _addedNetworkObject: {fileID: 2531821649487806876}
-  _networkObjectCache: {fileID: 2531821649487806876}
-  walkSpeed: 6
-  runSpeed: 12
-  gravity: -9.8
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  isGrounded: 0
-  lastActivePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &3542588822992052946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,10 +172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4856011935944741794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f900bad070d3014ebb6addfda35a757, type: 3}
+  m_Script: {fileID: 11500000, guid: ce94a74fec2ab23408c033b3a8b64d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2531821649487806876}
   _networkObjectCache: {fileID: 2531821649487806876}
 --- !u!114 &2471545568803335098
@@ -215,35 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd987e4ec58b1540a074da14b636e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 2531821649487806876}
   _networkObjectCache: {fileID: 2531821649487806876}
   maxHealth: 20
   health: 20
   timeToRevive: 5
   timeRemains: 0
---- !u!114 &2843351387878857574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856011935944741794}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24df91678d67b844e9500722573ddd9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _componentIndexCache: 4
-  _addedNetworkObject: {fileID: 2531821649487806876}
-  _networkObjectCache: {fileID: 2531821649487806876}
-  attack: 5
-  critMultiplyer: 2.5
-  timeToCharge: 2
-  chargeTimer: 0
-  charge: 0
-  isCharging: 0
-  bullet: {fileID: 11400000, guid: 9e2d1420ef6a44446b4b14054dff3c4a, type: 2}
 --- !u!114 &2531821649487806876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,10 +213,9 @@ MonoBehaviour:
   <ComponentIndex>k__BackingField: 0
   _networkBehaviours:
   - {fileID: 2589047727254941555}
-  - {fileID: 4475127842887994953}
   - {fileID: 3542588822992052946}
   - {fileID: 2471545568803335098}
-  - {fileID: 2843351387878857574}
+  - {fileID: -1330333429878458624}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   _isNetworked: 1
@@ -291,9 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 2531821649487806876}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 2531821649487806876}
   _synchronizeParent: 0
   _packing:
     Position: 1

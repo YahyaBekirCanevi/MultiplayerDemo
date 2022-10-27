@@ -15,14 +15,24 @@ MonoBehaviour:
   waitForSecondsToDespawn: 10
   objectToSpawn: {fileID: 4887224163717233140, guid: 301b6df3608605f4fb2163a99f8f23a1, type: 3}
   spawned: {fileID: 0}
-  damage: 12.5
+  damage: 0
+  timeToCharge: 0
   movementSpeed: 2
-  movemnetCurve:
+  movementCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -30,14 +40,15 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 2
+      value: -1
+      inSlope: 0.17843533
+      outSlope: 0.17843533
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  verticalMovementMultiplier: 2

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnableObject", menuName = "ScriptableObject/SpawnableObject")]
+[CreateAssetMenu(fileName = "SpawnableObject", menuName = "SpawnableObject/New")]
 public class SpawnableObject : ScriptableObject
 {
     public float waitForSecondsToDespawn = 10;

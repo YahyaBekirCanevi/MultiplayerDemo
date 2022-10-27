@@ -2,14 +2,14 @@ using System.Collections;
 using FishNet.Object;
 using UnityEngine;
 
-public class PlayerSpawnObjectController : NetworkBehaviour
+public class SpawnObjectController : NetworkBehaviour
 {
     public override void OnStartClient()
     {
         base.OnStartClient();
         if (!(base.IsOwner))
         {
-            GetComponent<PlayerSpawnObjectController>().enabled = false;
+            GetComponent<SpawnObjectController>().enabled = false;
         }
     }
 
@@ -53,7 +53,7 @@ public class PlayerSpawnObjectController : NetworkBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        ServerManager.Despawn(obj.spawned);
         SetSpawnedObject(obj, null);
+        ServerManager.Despawn(obj.spawned);
     }
 }

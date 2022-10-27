@@ -4,14 +4,14 @@ public class SettingsManagementController : MonoBehaviour
 {
     public static SettingsManagementController Instance { get; private set; }
     [SerializeField] private bool isFullScreen = true;
-    public Vector2 screenSize;
-    private Vector2 scale = new Vector2(16, 9);
-    private float[] sizes = new float[] { 600, 720, 1080, 1600, 2160 };
+    ScreenSize screenSize = ScreenSize.s_auto;
+    Vector2 currentScreenSize;
     int index = 3;
     private void Awake()
     {
         Instance = this;
-        screenSize = new Vector2(Screen.width, Screen.height);
+        currentScreenSize = new Vector2(Screen.width, Screen.height);
+        ScreenSizeExtension.Init(currentScreenSize);
         SetResulation();
         DontDestroyOnLoad(this.gameObject);
     }
@@ -21,10 +21,7 @@ public class SettingsManagementController : MonoBehaviour
             SetFullScreen();
         if (Input.GetKeyDown(KeyCode.R))
         {
-            index++;
-            index = index % sizes.Length;
-            print(index + "" + sizes.Length);
-            screenSize = scale * (sizes[index] / scale.y);
+            currentScreenSize = screenSize.GetScreenSize();
             SetResulation();
         }
 
@@ -37,7 +34,6 @@ public class SettingsManagementController : MonoBehaviour
     }
     public void SetResulation()
     {
-        Screen.SetResolution(((int)screenSize.x), ((int)screenSize.y), isFullScreen);
-        ScaleCanvasWithScreenSize.Instance.UpdateScale();
+        Screen.SetResolution(((int)currentScreenSize.x), ((int)currentScreenSize.y), isFullScreen);
     }
 }

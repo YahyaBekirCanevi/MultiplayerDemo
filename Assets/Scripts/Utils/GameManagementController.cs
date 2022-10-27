@@ -6,6 +6,8 @@ public class GameManagementController : MonoBehaviour
 {
     public static GameManagementController Instance { get; private set; }
     public float lowestPoint = -10;
+    [SerializeField] private float gravity = -9.8f;
+    public float Gravity { get => gravity; }
     public Transform[] SpawnPoints;
     public GameObject escapeMenu;
     public Slider healthBar;

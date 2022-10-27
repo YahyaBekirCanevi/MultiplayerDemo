@@ -54,11 +54,9 @@ public class Player : NetworkBehaviour
         if (player == null) return;
 
         print("ActivateChildOnObservers");
-        player.GetComponent<PlayerController>().enabled = condition;
         player.GetComponent<CharacterController>().enabled = condition;
         player.GetComponent<HealthController>().enabled = condition;
-        player.GetComponent<PlayerShoot>().enabled = condition;
-        player.GetComponent<PlayerSpawnObjectController>().enabled = condition;
+        player.GetComponent<SpawnObjectController>().enabled = condition;
     }
     [ServerRpc]
     public void TogglePlayerReadyServer(Player player, bool isReady)

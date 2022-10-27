@@ -1,13 +1,11 @@
-using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DamageDealerObject", menuName = "ScriptableObject/DamageDealerObject")]
+[CreateAssetMenu(fileName = "DamageDealerObject", menuName = "DamageDealerObject/New")]
 public class DamageDealerObject : SpawnableObject
 {
     public float damage;
+    public float timeToCharge = 3;
     public float movementSpeed;
-    public Func<DamageDealerObject, float, float, float> Movement;
-    public AnimationCurve movemnetCurve;
     public DamageDealerObject(float _waitForSecondsToDespawn, GameObject _objectToSpawn, float _damage, float _movementSpeed)
         : base(_waitForSecondsToDespawn, _objectToSpawn)
     {

@@ -1157,7 +1157,6 @@ GameObject:
   - component: {fileID: 843337252}
   - component: {fileID: 843337251}
   - component: {fileID: 843337250}
-  - component: {fileID: 843337254}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1194,12 +1193,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 250
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 0
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1249,20 +1248,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &843337254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843337249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13da060ad67e280439b3b0638baa21ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  matchType: 0
-  screenSize: {x: 0, y: 0}
 --- !u!1 &865156656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFullScreen: 1
-  screenSize: {x: 1920, y: 1080}
 --- !u!1 &1054553326
 GameObject:
   m_ObjectHideFlags: 0
